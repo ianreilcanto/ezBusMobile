@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
+
+</head>
+
+<body>
+
+	<div data-role="page" id="home" data-theme="d">
+
+		<div data-role="header" data-position="fixed">
+			<!-- <img border="0" src="logo.png" style="float:left;display:inline"> -->
+			<h1>Home</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<form action="">
+				<table>
+					<thead>
+						<tr>
+							<td>Daily schedule</td>
+							<td>Time</td>
+						</tr>
+					</thead>
+					<tbody id="trips">
+					</tbody>
+				</table>
+			</form>
+			<a href="#mail" class="ui-btn">Contact Us</a>
+		</div>
+	</div>
+
+
+
+	<div class="schedules"></div>
+	
+
+
+	<div data-role="page" id="book" data-theme="d">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#home" data-direction="reverse"
+				class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-b">Back</a>
+			<h1>Reservation</h1>
+		</div>
+
+		<div class="ui-content">
+			<form action="">
+				First Name:<br>
+				<input type="text" name="fname">
+				<input type="hidden" name="test">
+				Last Name:<br>
+				<input type="text" name="lname">
+				Phone Number:<br>
+				<input type="text" name="num">
+				Email:<br>
+				<input type="text" name="num">
+				<table>
+					Information:
+					<tbody>
+						<tr>
+							<td class="reserve-bustype"></td>
+							<td class="reserve-busnumber"></td>
+						</tr>
+						<tr>
+							<td class="reserve-driver"></td>
+							<td class="reserve-driverage"></td>
+						</tr>
+						<tr>
+							<td class="reserve-bound"></td>
+							<td class="reserve-time"></td>
+						</tr>
+					<tbody>
+				</table>
+				<input type="submit" value="Reserve" class="submit">
+			</form>
+		</div>
+
+	</div>
+
+
+
+	<div data-role="page" id="mail" data-theme="d">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#home" data-direction="reverse"
+				class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-b">Back</a>
+			<h1>Contact</h1>
+		</div>	
+
+		<div class="ui-content">
+			<div class="ui-content">
+				<form action="">
+					Full Name:<br>
+					<input type="text" name="fname">
+					Email:<br>
+					<input type="text" name="email">
+					Message:
+					<textarea name="message" id="message"></textarea>
+					<br>
+					<input type="submit" value="Send" class="ui-btn">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).on('mobileinit', function () {
+			$.mobile.defaultPageTransition = 'slide';
+		});
+	</script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="scripts.js"> </script>
+	
+</body>
+
+</html>
